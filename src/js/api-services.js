@@ -80,7 +80,7 @@ class ApiServices {
         <h2 class="text-pink-500 font-bold text-[14px] md:text-base">${event.name}</h2>
         <p class="text-white font-normal text-[14px] md:text-base">${event.dates.start.localDate}</p>
         <div class="flex items-center gap-[3px]">
-          <img class="w-[7px] h-[10px]" src="./public/icon-marker.svg" alt="">
+          <img class="w-[7px] h-[10px]" src="/icon-marker.svg" alt="">
           <p class="text-white font-semibold text-[12px] md:text-[14px]">${event._embedded.venues[0].name}</p>
         </div>
       </div>
