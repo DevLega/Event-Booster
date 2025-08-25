@@ -1,0 +1,19 @@
+{
+  "name": "Event-Booster",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "npx parcel src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.12",
+    "parcel": "^2.15.4",
+    "tailwindcss": "^4.1.12"
+  },
+  "devDependencies": {
+    "posthtml-include": "^2.0.1"
+  }
+}
