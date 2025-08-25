@@ -2,14 +2,21 @@
   "name": "Event-Booster",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://DevLega.github.io/Event-Booster/",
+  "homepage": "https://DevLega.github.io/Event-Booster",
   "scripts": {
     "dev": "npx parcel src/index.html",
     "build": "parcel build src/index.html --public-url /Event-Booster/"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevLega/Event-Booster.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevLega/Event-Booster/issues"
+  },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.12",
     "parcel": "^2.15.4",
