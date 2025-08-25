@@ -3,11 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "npx parcel src/index.html"
+    "dev": "npx parcel src/index.html",
+    "build": "parcel build src/*.html --public-url /eventbooster/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevLega/Event-Booster.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevLega/Event-Booster/issues"
+  },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.12",
     "parcel": "^2.15.4",
