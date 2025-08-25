@@ -2,6 +2,7 @@
   "name": "Event-Booster",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://DevLega.github.io/Event-Booster/",
   "scripts": {
     "dev": "npx parcel src/index.html",
     "build": "parcel build src/*.html --public-url /Event-Booster/"
