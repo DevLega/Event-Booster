@@ -33,11 +33,11 @@ body {
 }
 @media (max-width: 992px) {
   .header_bg {
-    background-image: url('/public/header-bg-tablet.svg');
+    background-image: url('../public/header-bg-tablet.svg');
   }
 }
 @media (max-width: 576px) {
   .header_bg {
-    background-image: url('/public/header-bg-mobile.svg');
+    background-image: url('../public/header-bg-mobile.svg');
   }
 }
