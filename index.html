@@ -1,4 +1,4 @@
-<!DOCTYPE html><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><link href=Event-Booster.6de81934.css rel=stylesheet><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel=stylesheet><body class="bg-black container mx-auto px-4 text-white">
+<!DOCTYPE html><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><link href=Event-Booster.8061c19f.css rel=stylesheet><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel=stylesheet><body class="bg-black container mx-auto px-4 text-white">
   <section class="header header_bg">
         <div class=container>
     <img src=logo_event-booster.89f9efae.svg class="absolute left-0 max-[320px]:h-[90px] max-[320px]:w-[107px] max-[768px]:h-[151px] max-[768px]:w-[178px] md:h-[201px] md:w-[238px] min-[320px]:max-[576px]:h-[110px] min-[320px]:max-[576px]:w-[140px] min-[768px]:max-[992px]:h-[170px] min-[768px]:max-[992px]:w-[200px] top-0" alt=logo>
@@ -11,9 +11,11 @@
             <input id=search-input class="focus:outline-none font-normal placeholder-[#939393] text-[#FFFFFF] text-base" placeholder="Start searching">
             <img src=icon-search.09c40fdc.svg alt=Logo class=size-3>
         </div>
-        <div class="backdrop-blur-[20px] bg-[#FFFFFF33] cursor-pointer flex h-[40px] items-center justify-between md:justify-self-start px-[30px] py-[10px] rounded-[20px] select-none w-[270px]">
-            <h3 class="font-normal text-[#939393] text-base">Choose country</h3>
-            <img src=icon-dropdown.38da5690.svg alt=Logo class=size-3>
+        <div id=countryDropdown class="backdrop-blur-[20px] bg-[#FFFFFF33] cursor-pointer flex h-[40px] items-center justify-between md:justify-self-start px-[30px] py-[10px] relative rounded-[20px] select-none w-[270px]">
+            <h3 id=selectedCountry class="font-normal text-[#939393] text-base">Choose country</h3>
+            <img src=icon-dropdown.38da5690.svg alt=Logo class="duration-300 size-3 transition-transform" id=dropdownArrow>
+
+            <ul id=countryList class="absolute backdrop-blur-[20px] bg-[#FFFFFF33] hidden left-0 max-h-[150px] overflow-y-auto rounded-[10px] shadow-lg top-[45px] w-full z-50"></ul>
         </div>
     </nav>
     </div>
@@ -61,7 +63,7 @@
   </nav>
   
 </main>
-  <div class="fixed flex inset-0 items-center justify-center z-50">
+  <div class="fixed flex inset-0 invisible items-center justify-center z-50">
   <div class="bg-[#FFF2FD] max-w-3xl p-25 rounded-br-[300px] rounded-tl-[300px] shadow-lg w-full">
     
     
@@ -148,5 +150,5 @@
     <p class="font-normal md:text-base text-[#939393] text-[14px]">© 2021 | All Rights Reserved | Developed with ♥ by GoIT Students</p>
   </footer>
 
-  <script type=module src=Event-Booster.418ae3e7.js></script>
+  <script type=module src=Event-Booster.a7b001bd.js></script>
 
