@@ -1,7 +1,7 @@
 import refs from "./refs";
 import ApiServices from "./api-services";
 
-const api = new ApiServices();
+export const api = new ApiServices();
 
 const MAX_VISIBLE = 5;
 const RESIZE_DEBOUNCE = 250;
@@ -71,14 +71,19 @@ export function updatePagination() {
 }
 
 /* ---------- Data Loader ---------- */
-async function loadData() {
+export async function loadData() {
   getPageSize();
   try {
     const query = refs.searchInput.value.trim();
 
-    const data = query
-      ? await api.getDataByEventName(query)
-      : await api.getData();
+    let data;
+    if (api.countryCode) {
+      data = await api.getDataByCountry(api.countryCode);
+    } else if (query) {
+      data = await api.getDataByEventName(query);
+    } else {
+      data = await api.getData();
+    }
 
     api.renderData(data);
     updatePagination();
@@ -104,3 +109,4 @@ refs.searchInput.addEventListener('input', debounce(() => {
     api.page = 1;
     loadData()
 }), 1000)
+
