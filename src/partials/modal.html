@@ -1,81 +1,90 @@
-<div class="fixed inset-0 flex items-center justify-center z-50 invisible">
-  <div class="bg-[#FFF2FD] rounded-tl-[300px] rounded-br-[300px] p-25 max-w-3xl w-full shadow-lg">
-    
-    <!-- Кругле фото зверху -->
-    <div class="flex justify-center -mt-16 mb-6">
-      <div class="w-36 h-36 rounded-full overflow-hidden  ">
-        <img src="../public/picr.svg" alt="" class="w-full h-full object-cover">
+<section id="modal-window"
+  class="hidden fixed inset-0 flex items-start justify-center z-50 bg-[rgba(32,13,29,0.6)] overflow-y-auto">
+  <div id="modal-window_bg" class="relative bg-[#FFF2FD] rounded-tl-[300px] rounded-br-[300px] 
+            px-[30px] py-[54px] max-w-3xl w-full shadow-lg mt-4 mb-4">
+    <div id="modal-wrp" class="container ">
+      <!-- CLOSE BTN -->
+      <div id="modal-window_close-icon" class="close-btn absolute top-[30px] right-[30px] cursor-pointer">
+        <img src="../public/close-icon.svg" alt="close-btn">
       </div>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-      <!-- Ліва частина -->
-      <div class="flex items-center justify-center rounded-2xl">
-        <img src="../public/pic.svg" alt="#">
-      </div>
-     
-      <!-- Права частина -->
-      <div class="space-y-2 pt-25">
-        
-        <!-- INFO -->
-        <div>
-          <h3 class="text-[#DC56C5] text-lg font-bold">INFO</h3>
-          <p class="text-black">
-            Atlas Weekend is the largest music festival in Ukraine. 
-            More than 200 artists will create a proper music festival 
-            atmosphere on 10 stages.
-          </p>
-        </div>
-
-        <!-- WHEN -->
-        <div>
-          <h3 class="text-[#DC56C5] text-lg font-bold">WHEN</h3>
-          <p class="text-black">2021-06-09</p>
-          <p class="text-black">20:00 (Kyiv/Ukraine)</p>
-        </div>
-
-        <!-- WHERE -->
-        <div>
-          <h3 class="text-[#DC56C5] text-lg font-bold">WHERE</h3>
-          <p class="text-black">Kyiv, Ukraine</p>
-          <p class="text-black">VDNH</p>
-        </div>
-
-        <!-- WHO -->
-        <div>
-          <h3 class="text-[#DC56C5] text-lg font-bold">WHO</h3>
-          <p class="text-black">The Black Eyed Peas</p>
-        </div>
-
-        <!-- PRICES -->
-        <div>
-          <h3 class="text-[#DC56C5] text-lg font-bold">PRICES</h3>
-          
-          <!-- Standart -->
-          <div class="mb-4">
-            <p class="text-black mb-2">Standart 300-500 UAH</p>
-            <button class="bg-[#4C00FF] text-white px-3 py-2 rounded-md w-full">
-              BUY TICKETS
-            </button>
-          </div>
-
-          <!-- VIP -->
-          <div>
-            <p class="text-black mb-2">VIP 1000-1500 UAH</p>
-            <button class="bg-[#4C00FF] text-white px-3 py-1 rounded-md w-full">
-              BUY TICKETS
-            </button>
+      <div id="modal-content">
+        <!-- Фото зверху -->
+        <div class="flex justify-center pb-[34px]">
+          <div class="w-36 h-36 rounded-full overflow-hidden">
+            <img id="modal-window_top-photo" src="../public/picr.svg" alt="" class="w-full h-full object-cover" />
           </div>
         </div>
 
-        <!-- AUTHOR BTN -->
-        <div class="text-center pt-4">
-          <button class="border border-[#4C00FF] text-[#4C00FF] px-6 py-2 rounded-md font-medium">
+        <!-- ОСНОВНА ЧАСТИНА -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <!-- Ліва частина -->
+          <div class="w-full   overflow-hidden">
+            <img id="modal-winow_main-photo" src="../public/pic.svg" alt="poster-img"
+              class="w-full h-full object-cover object-center" />
+          </div>
+
+          <!-- Права частина -->
+          <div class=" space-y-[20px]">
+
+            <div>
+              <h3 class="text-[#DC56C5] text-[24px] font-semibold leading-[1.2] pb-[7px]">INFO</h3>
+              <p id="info-descr" class="text-black text-[18px] leading-[1.2] line-clamp-3">
+                Atlas Weekend is the largest music festival in Ukraine. More than
+                200 artists will create a proper music festival atmosphere on 10
+                stages.
+              </p>
+              <button id="toggle-info"
+                class="text-[#4C00FF] font-medium mt-2 cursor-pointer text-[16px] md:text-[14px]">
+                View More
+              </button>
+            </div>
+
+            <div>
+              <h3 class="text-[#DC56C5] text-[24px] font-semibold leading-[1.2] pb-[7px]">WHEN</h3>
+              <p id="when-descr_date" class="text-black text-[18px] leading-[1.2]">2021-06-09</p>
+              <p id="when-descr_time" class="text-black text-[18px] leading-[1.2]">20:00 (Kyiv/Ukraine)</p>
+            </div>
+
+            <div>
+              <h3 class="text-[#DC56C5] text-[24px] font-semibold leading-[1.2] pb-[7px]">WHERE</h3>
+              <p id="where-descr_city" class="text-black text-[18px] leading-[1.2]">Kyiv, Ukraine</p>
+              <p id="where-descr_place" class="text-black text-[18px] leading-[1.2]">VDNH</p>
+            </div>
+
+            <div>
+              <h3 class="text-[#DC56C5] text-[24px] font-semibold leading-[1.2] pb-[7px]">WHO</h3>
+              <p id="who-descr_author" class="text-black text-[18px] leading-[1.2]">The Black Eyed Peas</p>
+            </div>
+
+            <div>
+              <h3 class="text-[#DC56C5] text-[24px] font-semibold leading-[1.2] pb-[7px]">PRICES</h3>
+
+              <div class="mb-4">
+                <p id="descr_standart-price" class="text-black mb-2 text-[18px] leading-[1.2]">Standart 300-500 UAH</p>
+                <button id="buyStandartBtn"
+                  class="modal-window-btn bg-[#4C00FF] text-white text-[16px] px-[19px] py-[10px] rounded-md w-1/2 cursor-pointer">
+                  BUY TICKETS
+                </button>
+              </div>
+
+              <div>
+                <p id="descr_vip-price" class="text-black mb-2 text-[18px] ">VIP 1000-1500 UAH</p>
+                <button id="buyStandartBtn"
+                  class="modal-window-btn bg-[#4C00FF] text-white text-[16px] px-[19px] py-[10px] rounded-md w-1/2 cursor-pointer">
+                  BUY TICKETS
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center pt-[45px]">
+          <button
+            class="modal-window-btn border border-[#4C00FF] text-[#4C00FF] px-6 py-2 rounded-md font-medium cursor-pointer">
             MORE FROM THIS AUTHOR
           </button>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
