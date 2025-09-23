@@ -1,4 +1,5 @@
 import refs from "./refs";
+import { openModal } from "./modal";
 import { updatePagination } from "./posters";
 
 class ApiServices {
@@ -70,9 +71,11 @@ class ApiServices {
   }
 
   renderData(data) {
-    if(!data) return;
-    const markUp = data._embedded.events.map(event => `
-      <div class="relative h-auto w-full md:w-[196px] text-center justify-items-center cursor-pointer hover:scale-103 transition-transform duration-100 ease-in-out">
+    if (!data) return;
+    const markUp = data._embedded.events
+      .map(
+        (event) => `
+      <div class="poster-item relative h-auto w-full md:w-[196px] text-center justify-items-center cursor-pointer hover:scale-103 transition-transform duration-100 ease-in-out" data-id="${event.id}">
         <div class="relative inline-block">
           <img class="mt-[13px] mb-[5px] rounded-tl-[50px] rounded-br-[50px] object-cover md:h-[227px]" src="${event.images[5].url}" alt="">
           <div class="absolute z-10 border border-[#DC56C54D] w-[153px] h-[143px] rounded-tl-[50px] rounded-br-[50px] top-0 -right-[12px]"></div>
@@ -84,9 +87,21 @@ class ApiServices {
           <p class="text-white font-semibold text-[12px] md:text-[14px]">${event._embedded.venues[0].name}</p>
         </div>
       </div>
-    `).join("");
+    `
+      )
+      .join("");
 
     refs.posters.innerHTML = markUp;
+    const posterEls = refs.posters.querySelectorAll(".poster-item");
+    posterEls.forEach((poster) => {
+      poster.addEventListener("click", () => {
+        const eventId = poster.getAttribute("data-id");
+        const eventData = data._embedded.events.find(
+          (event) => event.id === eventId
+        );
+        openModal(eventData);
+      });
+    });
   }
 }
 
