@@ -27,19 +27,25 @@ body {
 }
 
 .header {
-  background-image: url('../public/header-bg.svg');
+  background-image: url('/public/header-bg.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+
 }
 @media (max-width: 992px) {
   .header {
-    background-image: url('../public/header-bg-tablet.svg');
+    background-image: url('/public/header-bg.svg');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 @media (max-width: 576px) {
   .header {
-    background-image: url('../public/header-bg-mobile.svg');
+    background-image: url('/public/header-bg.svg');
+    margin: 0 auto;
   }
 }
 
