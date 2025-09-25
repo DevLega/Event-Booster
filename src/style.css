@@ -27,7 +27,7 @@ body {
 }
 
 .header {
-  background-image: url('/public/header-background.png');
+  background-image: url('/public/hd-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -36,7 +36,7 @@ body {
 }
 @media (max-width: 992px) {
   .header {
-    background-image: url('/public/header-background.png');
+    background-image: url('/public/hd-bg.jpg');
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -44,7 +44,7 @@ body {
 }
 @media (max-width: 576px) {
   .header {
-    background-image: url('/public/header-background.png');
+    background-image: url('/public/hd-bg.jpg');
     margin: 0 auto;
   }
 }
@@ -175,11 +175,3 @@ body {
   43% { opacity: 1; }
   45% { opacity: 0.3; }
   46% { opacity: 1; }}
-
-
-
-
-
-        
-
-
