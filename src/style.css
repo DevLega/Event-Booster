@@ -17,7 +17,7 @@ body {
 }
 @media (min-width: 768px) {
   body {
-    background-image: url('/public/bg-body-tblt.svg');
+    background-image: url('../public/bg-body-tblt.svg');
   }
 }
 @media (min-width: 1024px) {
@@ -27,19 +27,19 @@ body {
 }
 
 .header {
-  background-image: url('/public/header-bg-desktop.svg');
+  background-image: url('../public/header-bg-desktop.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 @media (max-width: 992px) {
   .header {
-    background-image: url('/public/header-bg-tablet.svg');
+    background-image: url('../public/header-bg-tablet.svg');
   }
 }
 @media (max-width: 576px) {
   .header {
-    background-image: url('/public/header-bg-mobile.svg');
+    background-image: url('../public/header-bg-mobile.svg');
   }
 }
 
