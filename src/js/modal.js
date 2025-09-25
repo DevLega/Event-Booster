@@ -43,7 +43,7 @@ export function closeModal() {
   setTimeout(() => {
     modal.classList.add("hidden");
     document.body.style.overflow = "auto";
-  }, 500);
+  }, 100);
 }
 
 refs.closeBtn.addEventListener("click", closeModal);
